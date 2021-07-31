@@ -23,6 +23,7 @@ public static final int Button_A = 1;
 public static final int Button_Y = 4;
 public static final int Button_Lb = 5;
 public static final int Button_Rb = 6;
+public static final int Button_B = 2;
 
 
 

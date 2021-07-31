@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.robot.commands.Move;
 import frc.robot.commands.MoveSequence;
+import frc.robot.commands.circle;
 import frc.robot.commands.square;
 
 /**
@@ -23,16 +24,19 @@ public class OI {
  Button RbButton = new JoystickButton(driverController, RobotMap.Button_Rb);
  Button LbButton = new JoystickButton(driverController, RobotMap.Button_Lb);
  Button yButton = new JoystickButton(driverController, RobotMap.Button_Y);
+ Button bButton = new JoystickButton(driverController, RobotMap.Button_B);
   public double GetDriverRawAxis(int axis){
    return driverController.getRawAxis(axis);
   }
 
   public OI(){
-    xButton.whenPressed(new Move(2, -0.5, 0.5));
-    aButton.whenPressed(new MoveSequence());
+    xButton.whenActive(new Move(2, -1, 1));
+    //aButton.whenPressed(new MoveSequence());não aperta essa porra
+    aButton.whenPressed(new  Move(2, -0.7, 0.7);
     RbButton.whenPressed(new Move(1.3, -0.2, 0.2));//virar direita  
     LbButton.whenPressed(new Move(1.3, 0.2, -0.2));//virar esquerda
     yButton.whenPressed(new square());
+    bButton.whenPressed(new circle());
     
     
   }
